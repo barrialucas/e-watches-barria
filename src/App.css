@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;300;400;700;900&display=swap');
+
+.marca{
+  font-size: 50px;
+  color: black;
+  font-family: "Koh Santepheap";
+  font-weight: 700;
+}
+.marca:hover{
+  color: rgba(137, 43, 226, 0.61);
+  cursor:pointer;
+}
+.navbar{
+  background-color: rgb(206, 178, 178);
+}
+.nav-item{
+  margin: 0px 15px;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.nav-link{
+  color: #444;
+  cursor:pointer;
+}
+.cart{
+  height: 40px;
+  cursor: pointer;
+}
+.cart:hover{
+  color: rgba(137, 43, 226, 0.61);
+}
+.cart-number{
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.fondo{
+
+}
