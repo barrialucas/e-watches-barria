@@ -2,13 +2,13 @@ import React from "react";
 import CartWidget from "./CartWidget";
 
 
-function CompNav(){
+function Navbar(){
     return(
         <header>
         <nav className="navbar container-fluid">
             <div className="row container-fluid">
                 <div className="col-xl-4 col-xxl-4 nav__izq d-flex justify-content-center align-items-end">
-                    <a className="navbar-brand marca">E-Glasses</a>
+                    <a className="navbar-brand marca">E-Watches</a>
                 </div>
 
                 <div className="col-xl-4 col-xxl-4 d-flex justify-content-center">
@@ -28,4 +28,4 @@ function CompNav(){
     );
 };
 
-export default CompNav;
+export default Navbar;

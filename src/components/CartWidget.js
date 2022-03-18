@@ -1,6 +1,6 @@
 import React from "react";
 
-function CartWidget(){
+export default function CartWidget(){
     return(
         <div className="d-flex align-items-center">
             <i class="fas fa-shopping-bag cart"></i>
@@ -8,4 +8,3 @@ function CartWidget(){
         </div>
     );
 }
-export default CartWidget;

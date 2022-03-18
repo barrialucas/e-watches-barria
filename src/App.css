@@ -36,7 +36,68 @@
   margin-left: 10px;
   cursor: pointer;
 }
+.productos{
+  margin-top: 100px;
+}
+.titulo__reloj{
+  margin-top: 20px;
+}
+.cardd{
+  width: 400px;
+}
+.cardd:hover{
+  box-shadow: 5px 5px 10px rgba(255, 239, 19, 0.151);
+}
+.cantidad__reloj{
+  font-size: 20px;
+}
+.boton__sumarestar{
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 40px;
+  color: black;
+}
+.boton__sumarestar:hover{
+  color:red
+}
+.boton__comprar{
+  margin-top: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.boton__carro{
+  margin-top: 20px;
+}
+.botones{
+  background-color: rgba(131, 131, 131, 0.137);
+  border-radius: 10px;
+}
 
-.fondo{
-
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-1 {
+  width: 200px;
+  background: rgb(158, 98, 75);
+  background: linear-gradient(0deg, rgb(226, 154, 59) 0%, rgb(156, 95, 53) 100%);
+  border: none;
+}
+.btn-1:hover {
+   background: rgb(87, 87, 87);
+background: linear-gradient(0deg, rgb(178, 246, 89) 0%, rgb(59, 204, 40) 100%);
 }
