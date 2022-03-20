@@ -10,7 +10,7 @@ export default function App() {
   return (
     <div>
     <Navbar />
-    <ItemCount></ItemCount>
+    <ItemListContainer></ItemListContainer>
     </div>
   );
 };
