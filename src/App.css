@@ -43,7 +43,8 @@
   margin-top: 20px;
 }
 .cardd{
-  width: 400px;
+  width: 350px;
+height: auto;
 }
 .cardd:hover{
   box-shadow: 5px 5px 10px rgba(255, 239, 19, 0.151);
