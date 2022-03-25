@@ -20,18 +20,10 @@ const ItemCount=({stock,initial,onAdd})=>{
         onAdd(cantidad)
     }
 
+
 };
 export default ItemCount;
-/* {relojes.map(producto=>
-                <ItemCount
-                stock={producto.stock}
-                initial={producto.initial}
-                onAdd={onAdd}
-                />
-            )} */
-
-            /* onClick={()=>clickRestar()} */
-            /* onClick={()=>clickSumar()} */
+/* 
 
          /* const onAdd=(cantidad)=>{
         alert("Usted agregó "+cantidad+ " unidades")

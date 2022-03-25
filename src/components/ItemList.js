@@ -58,15 +58,15 @@ const ItemList=()=>{
             }else {
                 reject(`hay un error`)
             }
-        },2000);
+        },);
     })
     promesa.then(
         (resolve=>{
            setMostrar(resolve)
         })
-        
     )
     return(mostrar)
+    
 }
 
 
