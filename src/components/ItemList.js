@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import Item from "./Item";
 
 import casio1 from "../img/casio1.jpg";
@@ -44,6 +44,7 @@ let relojesArr=[{
 
 
 const ItemList=()=>{
+    const [mostrar, setMostrar] = useState(null)
     const promesa= new Promise((resolve, reject)=>{
         setTimeout(function(){  
             if (true){
@@ -61,9 +62,11 @@ const ItemList=()=>{
     })
     promesa.then(
         (resolve=>{
-           console.log(resolve)
+           setMostrar(resolve)
         })
+        
     )
+    return(mostrar)
 }
 
 
