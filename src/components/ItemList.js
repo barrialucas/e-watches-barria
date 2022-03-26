@@ -38,7 +38,7 @@ let relojesArr=[{
     name:"Casio A168wg Retro Vintage Gold",
     price:18500,
     img:casio1,
-    stock:4,
+    stock:3,
     initial:0,
 }];
 
@@ -52,7 +52,7 @@ const ItemList=()=>{
                 <div className="row container-fluid justify-content-center">
             {
             relojesArr.map((item)=>(
-            <Item name={item.name} price={item.price} stock={item.stock} img={item.img} initial={item.initial}/>
+            <Item name={item.name} price={item.price} stock={item.stock} img={item.img} initial={item.initial} />
             ))}
         </div>)
             }else {
