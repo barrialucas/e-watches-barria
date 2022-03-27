@@ -11,11 +11,11 @@ const ItemList=()=>{
             if (true){
                 resolve(
                 <div className="row container-fluid justify-content-center">
-            {
-            relojesArr.map((item)=>(
-            <Item name={item.name} price={item.price} stock={item.stock} img={item.img} initial={item.initial} id={item.id}/>
-            ))}
-        </div>)
+                    {
+                    relojesArr.map((item)=>(
+                    <Item name={item.name} price={item.price} stock={item.stock} img={item.img} initial={item.initial} id={item.id}/>
+                    ))}
+                </div>)
             }else {
                 reject(`hay un error`)
             }

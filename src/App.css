@@ -105,6 +105,9 @@ background: linear-gradient(0deg, rgb(178, 246, 89) 0%, rgb(59, 204, 40) 100%);
 
 /* MODAL----------------------------------- */
 .modal{
+  /* cambiar */
+  position: relative;
+  display: block;
   margin-top: 100px;
 }
 .modal__tamano{

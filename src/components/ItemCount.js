@@ -23,7 +23,7 @@ const ItemCount=({stock})=>{
             <div className="col-xxl-6 d-flex justify-content-center cantidad__reloj align-items-center">Cantidad:{cantidad}</div>
             <div className="col-xxl-3 d-flex justify-content-start"><span className="boton__sumarestar" onClick={()=>clickSumar()}>+</span></div>
             <div className="d-flex justify-content-center boton__carro">
-                    <button /* onClick={()=>addCart()} */ className="custom-btn btn-1">Agregar al Carro</button>
+                    <button /* onClick={()=>addCart} */ className="custom-btn btn-1">Agregar al Carro</button>
                 </div>
         </div>
         
