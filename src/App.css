@@ -102,3 +102,28 @@ height: auto;
    background: rgb(87, 87, 87);
 background: linear-gradient(0deg, rgb(178, 246, 89) 0%, rgb(59, 204, 40) 100%);
 }
+
+/* MODAL----------------------------------- */
+.modal{
+  margin-top: 100px;
+}
+.modal__tamano{
+  width: 1000px;
+}
+.titulo__modal{
+  font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 35px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+.parrafo__modal{
+  margin-bottom: 50px;
+}
+.precio__modal h4{
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 30px;
+}
+.precio__modal{
+  margin-bottom: 70px;
+}
