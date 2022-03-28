@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import ItemCount from "./ItemCount";
+import React from "react";
+import ItemCount from "react";
 
-const onAdd=(cantidad)=>{
-    console.log("click")
-}
 
-export default function CartWidget(){
+
+const CartWidget=()=>{
     return(
         <div className="d-flex align-items-center">
             <i className="fas fa-shopping-bag cart"></i>
@@ -13,3 +11,4 @@ export default function CartWidget(){
         </div>
     );
 }
+export default CartWidget;

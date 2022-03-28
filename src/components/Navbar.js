@@ -24,7 +24,7 @@ function Navbar(){
                         </ul>
                     </div>
                     <div className="col-xxl-3 d-flex justify-content-end">
-                            <CartWidget />
+                            <CartWidget/>
                     </div>
             </div>
         </nav>

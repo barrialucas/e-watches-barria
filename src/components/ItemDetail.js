@@ -3,7 +3,7 @@ import Item from "./Item";
 import ItemCount from "./ItemCount";
 import {relojesArr} from "./Modelos";
 
-const ItemDetail = ({ name, price, stock, img }) => {
+const ItemDetail = ({ productoSelecc}) => {
     
   return (
     <div className="modal " tabindex="-1" id="myModal">
@@ -16,12 +16,12 @@ const ItemDetail = ({ name, price, stock, img }) => {
           <div className="modal-body">
               
             <div className="row">
-                <div className="col-xxl-6"><img src={img} className="card-img-top" /></div>
+                <div className="col-xxl-6"><img src={productoSelecc.img} className="card-img-top" /></div>
                 <div className="col-xxl-6">
-                    <div className="col-xxl-12 titulo__modal"><h3>{name}</h3></div>
-                    <div className="col-xxl-12 parrafo__modal"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione odit, nobis neque sed placeat impedit, quae molestias, delectus dolore iste eum enim tempora! Molestias exercitationem voluptates consequuntur! Praesentium, omnis assumenda!</p></div>
-                    <div className="col-xxl-12 d-flex justify-content-around precio__modal"><p>Stock: {stock}</p><h4>${price}</h4></div>
-                    <div className="col-xxl-12 d-flex justify-content-center"><ItemCount stock={stock}/></div>
+                    <div className="col-xxl-12 titulo__modal"><h3>{productoSelecc.name}</h3></div>
+                    <div className="col-xxl-12 parrafo__modal"><p>{productoSelecc.desc}</p></div>
+                    <div className="col-xxl-12 d-flex justify-content-around precio__modal"><p>Stock: {productoSelecc.stock}</p><h4>${productoSelecc.price}</h4></div>
+                    <div className="col-xxl-12 d-flex justify-content-center"><ItemCount stock={productoSelecc.stock}/></div>
                 </div>
             </div>
 
