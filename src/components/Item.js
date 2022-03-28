@@ -1,6 +1,10 @@
 import React,{useState} from "react";
 import ItemCount from "./ItemCount";
 
+const onAdd = (cantidad) => {
+    alert("Usted agregó " + cantidad + " productos al carrito");
+    }
+
 const Item=({name, price,stock,img,id})=>{
     return(
         <div className="card cardd m-5 d-flex justify-content-center">
@@ -10,7 +14,7 @@ const Item=({name, price,stock,img,id})=>{
             <h4 className="card-text d-flex justify-content-center">Precio: ${price}</h4>
             <p>Stock: {stock} </p>
             <div>
-                <ItemCount stock={stock}/>
+                <ItemCount stock={stock} onAdd={onAdd}/>
             </div>           
         </div>
     </div>    

@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import ItemCount from "./ItemCount";
 
+const onAdd=(cantidad)=>{
+    console.log("click")
+}
+
 export default function CartWidget(){
     return(
         <div className="d-flex align-items-center">
