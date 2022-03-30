@@ -25,7 +25,7 @@ const ItemCount=({stock,onAdd})=>{
             <div className="col-xxl-3 d-flex justify-content-end"><span className="boton__sumarestar" onClick={()=>clickRestar()}>-</span></div>
             <div className="col-xxl-6 d-flex justify-content-center cantidad__reloj align-items-center">Cantidad:{cantidad}</div>
             <div className="col-xxl-3 d-flex justify-content-start"><span className="boton__sumarestar" onClick={()=>clickSumar()}>+</span></div>
-            <div className="d-flex justify-content-center boton__carro">
+            <div className="d-flex align-items-center justify-content-center  boton__carro">
                 <button  onClick={()=>addCart()} className="custom-btn btn-1">Agregar al Carro</button>
             </div>
         </div>   
@@ -34,9 +34,3 @@ const ItemCount=({stock,onAdd})=>{
 };
 
 export default ItemCount;
-
-/* 
-         /* const onAdd=(cantidad)=>{
-        alert("Usted agregó "+cantidad+ " unidades"
-        }
- */

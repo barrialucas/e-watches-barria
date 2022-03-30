@@ -1,19 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;300;400;700;900&display=swap');
-
 .marca{
-  font-size: 50px;
-  color: black;
-  font-family: "Koh Santepheap";
-  font-weight: 700;
+  width: 100%;
+        text-align: center;
+        font-size: 60px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        letter-spacing: -4px;
+        background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 .marca:hover{
   color: rgba(137, 43, 226, 0.61);
   cursor:pointer;
 }
 .navbar{
-  background-color: rgb(206, 178, 178);
+  background-color: #323333;
 }
 .nav-item{
   margin: 0px 15px;
@@ -22,12 +24,19 @@
   font-weight: 600;
 }
 .nav-link{
-  color: #444;
-  cursor:pointer;
+  text-decoration: none;
+            padding: 15px 20px;
+            font-family: 'Montserrat', sans-serif;
+            color:whitesmoke;
+            font-weight: 400;
+            font-size: 22px;
+            letter-spacing: 4px;
+            cursor: pointer;
 }
 .cart{
   height: 40px;
   cursor: pointer;
+  color: white;
 }
 .cart:hover{
   color: rgba(137, 43, 226, 0.61);
@@ -67,11 +76,15 @@ height: auto;
   cursor: pointer;
 }
 .boton__carro{
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .botones{
-  background-color: rgba(131, 131, 131, 0.137);
+  background-color: rgba(211, 209, 209, 0.034);
   border-radius: 10px;
+  padding-bottom: 10px;
+}
+.link{
+  text-decoration: none;
 }
 
 .custom-btn {
@@ -103,27 +116,51 @@ height: auto;
 background: linear-gradient(0deg, rgb(178, 246, 89) 0%, rgb(59, 204, 40) 100%);
 }
 
-/* MODAL----------------------------------- */
-.modal{
-  margin-top: 200px;
+/* detail producto */
+.producto__detail{
+  height: 500px;
+  margin-top: 100px;
 }
-.modal__tamano{
-  width: 1000px;
-}
-.titulo__modal{
-  font-family:'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 35px;
-  margin-bottom: 40px;
+
+.producto__detail .descripcion{
   margin-top: 30px;
+  margin-bottom: 20px;
 }
-.parrafo__modal{
+.producto__detail .precio{
   margin-bottom: 50px;
 }
-.precio__modal h4{
-    font-family: monospace;
-    font-weight: 600;
-    font-size: 30px;
+.producto__detail .stock{
+  margin-top: 20px;
 }
-.precio__modal{
-  margin-bottom: 70px;
-}
+
+.boton__volver button {
+  display: flex;
+  height: 3em;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: rgb(187, 167, 167);
+ }
+
+ .boton__volver button > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+ }
+
+ .boton__volver button:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+ }
+ 
+ .boton__volver button:hover {
+  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+  transform: translateY(-2px);
+ }
