@@ -1,12 +1,14 @@
-import React from "react";
+import React,{useState} from "react";
 import ItemCount from "./ItemCount";
 import {Link} from "react-router-dom";
 
-const onAdd = (cantidad) => {
-    alert("Usted agregó "+ cantidad+ " producto al carrito")
-}
 
-const Item=({id,name,img,stock,price,model,brand})=>{
+
+const Item=({id,img,stock,price,model,brand})=>{
+
+   
+
+
     return(
         <div className="card cardd m-5 d-flex justify-content-center">
         <h3 className="card-title d-flex justify-content-center titulo__reloj">{brand.toUpperCase()}</h3>
@@ -15,8 +17,8 @@ const Item=({id,name,img,stock,price,model,brand})=>{
         <div className="card-body">              
             <h4 className="card-text d-flex justify-content-center">Precio: ${price}</h4>
             <p>Stock: {stock} </p>
-            <div>
-                <ItemCount stock={stock} onAdd={onAdd}/>
+            <div className="btn__ver d-flex justify-content-center">
+                <Link to={`/detail/${id}`} ><button>Ver Más</button></Link>
             </div>           
         </div>
     </div>    

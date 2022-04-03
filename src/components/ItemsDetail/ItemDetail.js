@@ -1,31 +1,42 @@
-import React from "react";
+import React, {useState} from "react";
 import ItemCount from "../Items/ItemCount";
 import { useNavigate } from "react-router-dom";
 
-const onAdd = (cantidad) => {
-  alert("Usted agregó "+ cantidad+ " producto al carrito")
-}
-
-const ItemDetail = ({ productoSelecc}) => {
+const ItemDetail = ({id,img,brand,mode,price,stock,model,desc}) => {
   
   const navigate = useNavigate()
   const navegacion = () => {
     navigate(-1)
-}
-    
+  }
+  
+  const [cantidad, setCantidad]=useState(0)
+  const onAdd = () => {
+    const prodCarro={
+        id,
+        brand,
+        model,
+        img,
+        price,
+        cantidad,
+    }
+
+    console.log(prodCarro)
+  }
+
   return (
     <div className="container-fluid">
       <div className="row producto__detail">
         <div className="col-xxl-3"></div>
-        <div className="col-xxl-3"><img className="card-img-top"src={productoSelecc.img} alt={productoSelecc.brand}/></div>
+        <div className="col-xxl-3"><img className="card-img-top"src={img} alt={brand}/></div>
         <div className="col-xxl-3">
-          <h2 className="d-flex justify-content-center ">{productoSelecc.brand.toUpperCase()}</h2>
-          <h4 className="d-flex justify-content-center ">{productoSelecc.model}</h4>
-          <p className="descripcion">{productoSelecc.desc}</p>
-          <h5 className="d-flex justify-content-center precio">Precio: $ {productoSelecc.price}</h5>
-          <ItemCount stock={productoSelecc.stock} onAdd={onAdd}></ItemCount>
-          <p className="stock">Stock disponible: {productoSelecc.stock}</p>
+          <h2 className="d-flex justify-content-center ">{brand.toUpperCase()}</h2>
+          <h4 className="d-flex justify-content-center ">{model}</h4>
+          <p className="descripcion">{desc}</p>
+          <p className="stock">Stock disponible: {stock}</p>
+          <h5 className="d-flex justify-content-center precio">Precio: $ {price}</h5>
+          <ItemCount stock={stock} onAdd={onAdd} cantidad={cantidad} setCantidad={setCantidad}></ItemCount>
         </div>
+        
         <div className="col-xxl-3"></div>
         <hr/>
         

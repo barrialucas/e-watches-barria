@@ -26,7 +26,7 @@ const ItemDetailContainer=()=>{
         {   
             cargando
             ? <h2>Cargado Detalles</h2>
-            : <ItemDetail productoSelecc={productoSelecc}/>
+            : <ItemDetail {...productoSelecc}/>
         }
         </div>
     )
