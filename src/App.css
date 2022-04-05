@@ -34,8 +34,8 @@
             cursor: pointer;
 }
 .cart{
-  height: 40px;
-  cursor: pointer;
+  font-size: 40px;
+  margin-bottom: 10px;
   color: white;
 }
 .cart:hover{
@@ -44,6 +44,7 @@
 .cart-number{
   margin-left: 10px;
   cursor: pointer;
+  color: white;
 }
 .productos{
   margin-top: 100px;
@@ -201,6 +202,23 @@ height: auto;
  .boton__volver button:hover {
   box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
   transform: translateY(-2px);
+ }
+
+ .spinner{
+   height: 100px;
+   width: 100px;
+   position: absolute;
+   top: 50%;
+   left:46%;
+ }
+
+ .borrar__producto{
+   font-size: 40px;
+   border: none;
+   background-color: transparent;
+ }
+ .precio__porunidades{
+   text-align: center;
  }
 
 

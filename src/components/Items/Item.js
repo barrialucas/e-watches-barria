@@ -1,10 +1,7 @@
-import React,{useState} from "react";
-import ItemCount from "./ItemCount";
+import React from "react";
 import {Link} from "react-router-dom";
 
-
-
-const Item=({id,img,stock,price,model,brand})=>{
+const Item=({id,img,price,model,brand})=>{
 
    
 
@@ -16,7 +13,6 @@ const Item=({id,img,stock,price,model,brand})=>{
         <Link to={`/detail/${id}`}><img src={img} className="card-img-top" alt={brand}/></Link>
         <div className="card-body">              
             <h4 className="card-text d-flex justify-content-center">Precio: ${price}</h4>
-            <p>Stock: {stock} </p>
             <div className="btn__ver d-flex justify-content-center">
                 <Link to={`/detail/${id}`} ><button>Ver Más</button></Link>
             </div>           

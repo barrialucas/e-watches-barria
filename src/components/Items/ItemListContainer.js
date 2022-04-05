@@ -2,7 +2,7 @@ import React,{useEffect,useState} from "react";
 import {useParams} from "react-router-dom";
 import {Promesa} from "../Promesa"
 import ItemList from "./ItemList"
-
+import Spinner from 'react-bootstrap/Spinner'
 
 const ItemListContainer=()=>{
     
@@ -35,7 +35,7 @@ const ItemListContainer=()=>{
         <>
         {
             cargando
-            ? <h2>Cargando...</h2>
+            ? <Spinner className="spinner" animation="border" variant="info" size="xxl"/>
             : <ItemList listaRelojes={listaRelojes}/> 
         }
         </>  

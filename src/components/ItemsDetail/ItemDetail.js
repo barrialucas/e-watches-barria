@@ -1,15 +1,21 @@
-import React, {useState} from "react";
+import {useContext,useState} from "react";
+import { useNavigate, Link } from "react-router-dom";
+import {CartContext} from "../context/CartContext"
 import ItemCount from "../Items/ItemCount";
-import { useNavigate } from "react-router-dom";
 
-const ItemDetail = ({id,img,brand,mode,price,stock,model,desc}) => {
+
+
+const ItemDetail = ({id,img,brand,price,stock,model,desc}) => {
   
+  const { addProduct, isInCart } = useContext(CartContext)
+
   const navigate = useNavigate()
   const navegacion = () => {
     navigate(-1)
   }
-  
-  const [cantidad, setCantidad]=useState(0)
+
+  const [cantidad, setCantidad]=useState(1)
+
   const onAdd = () => {
     const prodCarro={
         id,
@@ -18,9 +24,10 @@ const ItemDetail = ({id,img,brand,mode,price,stock,model,desc}) => {
         img,
         price,
         cantidad,
+        desc
     }
 
-    console.log(prodCarro)
+    addProduct(prodCarro)
   }
 
   return (
@@ -34,7 +41,13 @@ const ItemDetail = ({id,img,brand,mode,price,stock,model,desc}) => {
           <p className="descripcion">{desc}</p>
           <p className="stock">Stock disponible: {stock}</p>
           <h5 className="d-flex justify-content-center precio">Precio: $ {price}</h5>
-          <ItemCount stock={stock} onAdd={onAdd} cantidad={cantidad} setCantidad={setCantidad}></ItemCount>
+
+          { 
+            !isInCart(id)
+            ?<ItemCount stock={stock} onAdd={onAdd} cantidad={cantidad} setCantidad={setCantidad}></ItemCount>
+            :<Link to="/cart" className="btn btn-success d-block my-3">Terminar mi compra</Link>
+          }
+
         </div>
         
         <div className="col-xxl-3"></div>
@@ -53,5 +66,10 @@ const ItemDetail = ({id,img,brand,mode,price,stock,model,desc}) => {
       
   );
 };
-
 export default ItemDetail;
+
+/* { 
+  !isInCart(id)
+     ?<ItemCount stock={stock} onAdd={onAdd} cantidad={cantidad} setCantidad={setCantidad}></ItemCount>
+     :<Link to="/cart" className="btn btn-success d-block my-3">Terminar mi compra</Link>
+  }  */

@@ -2,8 +2,9 @@ import React,{useEffect,useState} from "react";
 import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom";
 import {Promesa} from "../Promesa"
+import Spinner from 'react-bootstrap/Spinner'
 
-const ItemDetailContainer=()=>{
+export const ItemDetailContainer=()=>{
     const [productoSelecc, setProductoSelecc] = useState(null)
     const [cargando, setCargando]=useState(true)
 
@@ -25,11 +26,9 @@ const ItemDetailContainer=()=>{
         <div>
         {   
             cargando
-            ? <h2>Cargado Detalles</h2>
+            ? <Spinner className="spinner"animation="border" variant="info"/>
             : <ItemDetail {...productoSelecc}/>
         }
         </div>
     )
 }
-
-export default ItemDetailContainer;
