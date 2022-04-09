@@ -3,9 +3,6 @@ import {Link} from "react-router-dom";
 
 const Item=({id,img,price,model,brand})=>{
 
-   
-
-
     return(
         <div className="card cardd m-5 d-flex justify-content-center">
         <h3 className="card-title d-flex justify-content-center titulo__reloj">{brand.toUpperCase()}</h3>
