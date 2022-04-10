@@ -4,7 +4,7 @@ import Item from "./Item";
 const ItemList=({listaRelojes})=>{
     
     return(
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center items__altura">
             {listaRelojes.map((producto)=> <Item {...producto}/>)}
         </div>
     )

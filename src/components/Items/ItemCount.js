@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom"
 
 
 const ItemCount=({stock,onAdd,cantidad,setCantidad})=>{
@@ -12,7 +11,7 @@ const ItemCount=({stock,onAdd,cantidad,setCantidad})=>{
         
     }
     const clickRestar=()=>{
-        if(cantidad===0){
+        if(cantidad===1){
             return;
         }
         setCantidad(cantidad -1);
@@ -20,9 +19,9 @@ const ItemCount=({stock,onAdd,cantidad,setCantidad})=>{
     
     return(
         <div className="botones row">
-            <div className="col-xxl-3 d-flex justify-content-end"><span className="boton__sumarestar" onClick={()=>clickRestar()}>-</span></div>
+            <div className="col-xxl-3 d-flex justify-content-end"><span className={`boton__sumarestar ${cantidad === 1 ? 'hiden' : 'show'}`} onClick={clickRestar}>-</span></div>
             <div className="col-xxl-6 d-flex justify-content-center cantidad__reloj align-items-center">Cantidad:{cantidad}</div>
-            <div className="col-xxl-3 d-flex justify-content-start"><span className="boton__sumarestar" onClick={()=>clickSumar()}>+</span></div>
+            <div className="col-xxl-3 d-flex justify-content-start"><span className={`boton__sumarestar ${cantidad === stock ? 'hiden' : 'show'}`} onClick={clickSumar} >+</span></div>
             <div className="d-flex align-items-center justify-content-center  boton__carro">
                 <button  onClick={()=>onAdd()} className="custom-btn btn-1">Agregar al Carro</button>
             </div>

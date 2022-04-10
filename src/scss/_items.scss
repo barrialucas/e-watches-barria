@@ -1,0 +1,79 @@
+.productos{
+    margin-top: 100px;
+  }
+  .titulo__reloj{
+    margin-top: 20px;
+    font-family: $monse;
+    font-weight: 700;
+  }
+  .modelo__reloj{
+    font-family: $monse;
+    font-size: 22px;
+
+  }
+  .precio__item{
+    font-family: $space;
+    font-size: 24px;
+  }
+  .precio{
+    font-family: $monse;
+    font-size: 24px;
+  }
+  .cardd{
+    width: 350px;
+    height: auto;
+  }
+  
+  .cardd:hover{
+    box-shadow: 5px 5px 10px #ff003746;
+  }
+  .cantidad__reloj{
+    font-size: 20px;
+  }
+  .btn__ver button {
+    margin-top: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.3em 1.5em;
+    border: 3px solid #FF0072;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+   }
+   .btn__ver button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #FF0072;
+    z-index: -1;
+   }
+   .btn__ver button:hover, button:focus {
+    color: white;
+   }
+  
+   .btn__ver button:hover:before, button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+   }
+  
+   .btn__ver button:active {
+    transform: scale(0.9);
+   }
+   .items__altura{
+     margin-top: 100px;
+   }

@@ -10,7 +10,7 @@ const Cart =()=>{
     const navegacion = () => {
     navigate("/")
     }
-    const { cart, cartTotal, cartEmpty, removeItem,cantProdCart } = useContext(CartContext)
+    const { cart, cartTotal, cartEmpty, removeItem,cantProdCart} = useContext(CartContext)
 
     
     return(
@@ -26,7 +26,10 @@ const Cart =()=>{
                             <h5>{item.model.toUpperCase()}</h5>
                             <p>{item.desc}</p>
                         </div>
-                        <p className="col-xxl-2 d-flex justify-content-center align-items-center">Cantidad: {item.cantidad}</p>
+                        <div className="col-xxl-2 d-flex justify-content-center align-items-center"> 
+                            <p>Cantidad: {item.cantidad}</p>
+                        </div>
+                        
                         <div className="col-xxl-3 d-flex justify-content-center align-items-center flex-column">
                             <p>Precio por unidad: ${item.price}</p>
                             <h5 className="precio__porunidades">Precio x{item.cantidad} unidades: ${item.price * item.cantidad}</h5>
@@ -55,9 +58,16 @@ const Cart =()=>{
                         <button className="btn btn-danger" onClick={cartEmpty}>Vaciar carrito</button>
                     </div>
                     <div className="col-xxl-6 d-flex justify-content-end">
-                        <button className="btn btn-success">Seguir con la compra</button>
+                        <button className="btn btn-success">Terminar mi compra</button>
                     </div>
                     
+                </div>
+                <div className="row">
+                    <div className="col-xxl-6 d-flex justify-content-end">
+                    </div>
+                    <div className="col-xxl-6 d-flex justify-content-end">
+                        <button className="btn__seguir" onClick={navegacion}>Ver más productos</button>
+                    </div>
                 </div>
             </div>
             }
@@ -67,6 +77,5 @@ const Cart =()=>{
     )
 }
 
-//item sin stock no sumar, agregar condicional -clase 9
 
 export default Cart;

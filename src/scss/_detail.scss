@@ -1,0 +1,99 @@
+.cantidad__reloj{
+    font-size: 20px;
+  }
+  .boton__sumarestar{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 40px;
+    color: black;
+  }
+  .boton__sumarestar:hover{
+    color:rgb(76, 117, 204)
+  }
+  .boton__comprar{
+    margin-top: 20px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .boton__carro{
+    margin-top: 10px;
+  }
+
+
+  .boton__carro button {
+    position: relative;
+    padding: 10px 40px;
+    margin: 0px 10px 10px 0px;
+    float: left;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #2ecc71;
+    border: none;
+    border-bottom: 5px solid #27ae60;
+    text-shadow: 0px -2px #27ae60;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+   }
+   .boton__carro button:hover, button:active {
+    -webkit-transform: translate(0px,5px);
+    -ms-transform: translate(0px,5px);
+    transform: translate(0px,5px);
+    border-bottom: 1px solid #2ecc71;
+   }
+   .producto__detail{
+    height: 500px;
+    margin-top: 100px;
+  }
+  
+  .producto__detail .descripcion{
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .producto__detail .precio{
+    margin-bottom: 50px;
+  }
+  .producto__detail .stock{
+    margin-top: 20px;
+  }
+  
+  .boton__volver button {
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: rgb(187, 167, 167);
+   }
+  
+   .boton__volver button > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+   }
+  
+   .boton__volver button:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+   }
+   
+   .boton__volver button:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+   }
+
+   .precio__margin{
+     margin-top: 40px;
+   }
+
+   .hiden{
+     display: none;
+   }

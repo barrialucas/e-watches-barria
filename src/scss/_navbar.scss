@@ -1,0 +1,51 @@
+.marca{
+    width: 100%;
+          text-align: center;
+          font-size: 60px;
+          font-family: 'Montserrat', sans-serif;
+          font-style: italic;
+          font-weight: 700;
+          letter-spacing: -4px;
+          background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+  }
+  .marca:hover{
+    color: rgba(137, 43, 226, 0.61);
+    cursor:pointer;
+  }
+  .navbar{
+    background-color: #323333;
+  }
+  .nav-item{
+    margin: 0px 15px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+  .nav-link{
+    text-decoration: none;
+              padding: 15px 20px;
+              font-family: 'Montserrat', sans-serif;
+              color:whitesmoke;
+              font-weight: 400;
+              font-size: 22px;
+              letter-spacing: 4px;
+              cursor: pointer;
+  }
+  .cart{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  .cart:hover{
+    color: rgba(66, 105, 211, 0.89);
+  }
+  .cart-number{
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+  }
+  .link{
+    text-decoration: none;
+  }

@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.marca {
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -4px;
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.marca:hover {
+  color: rgba(137, 43, 226, 0.61);
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #323333;
+}
+
+.nav-item {
+  margin: 0px 15px;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 15px 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: whitesmoke;
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.cart {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.cart:hover {
+  color: rgba(66, 105, 211, 0.89);
+}
+
+.cart-number {
+  margin-left: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.productos {
+  margin-top: 100px;
+}
+
+.titulo__reloj {
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.modelo__reloj {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+}
+
+.precio__item {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+}
+
+.precio {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+}
+
+.cardd {
+  width: 350px;
+  height: auto;
+}
+
+.cardd:hover {
+  -webkit-box-shadow: 5px 5px 10px #ff003746;
+          box-shadow: 5px 5px 10px #ff003746;
+}
+
+.cantidad__reloj {
+  font-size: 20px;
+}
+
+.btn__ver button {
+  margin-top: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.3em 1.5em;
+  border: 3px solid #FF0072;
+  border-radius: 2px;
+  position: relative;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #FF0072;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+.btn__ver button:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: #FF0072;
+  z-index: -1;
+}
+
+.btn__ver button:hover, button:focus {
+  color: white;
+}
+
+.btn__ver button:hover:before, button:focus:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.btn__ver button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.items__altura {
+  margin-top: 100px;
+}
+
+.cantidad__reloj {
+  font-size: 20px;
+}
+
+.boton__sumarestar {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 40px;
+  color: black;
+}
+
+.boton__sumarestar:hover {
+  color: #4c75cc;
+}
+
+.boton__comprar {
+  margin-top: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton__carro {
+  margin-top: 10px;
+}
+
+.boton__carro button {
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 3px;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+  background-color: #2ecc71;
+  border: none;
+  border-bottom: 5px solid #27ae60;
+  text-shadow: 0px -2px #27ae60;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.boton__carro button:hover, button:active {
+  -webkit-transform: translate(0px, 5px);
+  transform: translate(0px, 5px);
+  border-bottom: 1px solid #2ecc71;
+}
+
+.producto__detail {
+  height: 500px;
+  margin-top: 100px;
+}
+
+.producto__detail .descripcion {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.producto__detail .precio {
+  margin-bottom: 50px;
+}
+
+.producto__detail .stock {
+  margin-top: 20px;
+}
+
+.boton__volver button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3em;
+  width: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #bba7a7;
+}
+
+.boton__volver button > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.boton__volver button:hover > svg {
+  font-size: 1.2em;
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
+
+.boton__volver button:hover {
+  -webkit-box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+          box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.precio__margin {
+  margin-top: 40px;
+}
+
+.hiden {
+  display: none;
+}
+
+.spinner {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 46%;
+}
+
+.borrar__producto {
+  font-size: 40px;
+  border: none;
+  background-color: transparent;
+}
+
+.precio__porunidades {
+  text-align: center;
+}
+
+.carro__vacio {
+  margin-top: 50px;
+  height: 500px;
+  background-color: #cecece;
+  border-radius: 15px;
+}
+
+.btn-volver2 {
+  margin-top: 100px;
+}
+
+.carro__vacio__texto {
+  padding-top: 200px;
+  color: #4d4d4d;
+  font-size: 40px;
+}
+
+.btn-volver2 button {
+  width: 200px;
+}
+
+.btn__seguir {
+  border: none;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #4d4d4d;
+  margin-top: 15px;
+  background-color: white;
+}
+
+.btn__seguir:hover {
+  color: green;
+}
+/*# sourceMappingURL=style.css.map */

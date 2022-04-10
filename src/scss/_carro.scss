@@ -1,0 +1,47 @@
+.spinner{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left:46%;
+  }
+ 
+  .borrar__producto{
+    font-size: 40px;
+    border: none;
+    background-color: transparent;
+  }
+  .precio__porunidades{
+    text-align: center;
+  }
+ 
+ 
+  .carro__vacio{
+    margin-top: 50px;
+    height: 500px;
+    background-color: #cecece;
+    border-radius: 15px;
+  }
+  .btn-volver2{
+    margin-top: 100px;
+  }
+  .carro__vacio__texto{
+    padding-top: 200px;
+    color: #4d4d4d;
+    font-size: 40px;
+  }
+  .btn-volver2 button{
+    width: 200px;
+  }
+  .btn__seguir{
+    border: none;
+    font-size: 20px;
+    font-family: $monse;
+    font-weight: 700;
+    color: #4d4d4d;
+    margin-top: 15px;
+    background-color: white;
+  }
+  .btn__seguir:hover{
+    color: green;
+  }
