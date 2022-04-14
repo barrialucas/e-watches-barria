@@ -39,8 +39,13 @@ const ItemDetail = ({id,img,brand,price,stock,model,desc}) => {
           <h2 className="d-flex justify-content-center titulo__reloj">{brand.toUpperCase()}</h2>
           <h4 className="d-flex justify-content-center modelo__reloj">{model}</h4>
           <p className="descripcion">{desc}</p>
-          <p className="stock">Stock disponible: {stock}</p>
-          <h5 className="d-flex justify-content-center precio2 precio__margin">Precio: $ <span className="precio__item">{price}</span></h5>
+          
+          {stock===0
+          ?<p className="sin__stock" >Sin Stock</p>
+          :<p className="stock">Stock disponible: {stock}</p>
+          }
+          
+          <h5 className="d-flex justify-content-center precio2 precio__margin"><span className="precio__item">${price}</span></h5>
 
           { 
             !isInCart(id)

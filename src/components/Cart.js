@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { CartContext } from "./context/CartContext"
 import { BsTrash } from "react-icons/bs";
-import { useNavigate} from "react-router-dom";
+import { useNavigate,Link} from "react-router-dom";
 
 
 const Cart =()=>{
@@ -58,7 +58,7 @@ const Cart =()=>{
                         <button className="btn btn-danger" onClick={cartEmpty}>Vaciar carrito</button>
                     </div>
                     <div className="col-xxl-6 d-flex justify-content-end">
-                        <button className="btn btn-success">Terminar mi compra</button>
+                        <Link to="/checkOut" className="btn btn-success">Terminar mi compra</Link>
                     </div>
                     
                 </div>
