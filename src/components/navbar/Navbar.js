@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
+import {CartHistory} from "./CartHistory"
 
 const Navbar=()=>{
     return(
@@ -14,14 +15,16 @@ const Navbar=()=>{
             </div>
             
             <div className="row container-fluid">
-                <div className="col-xxl-3"></div>
+                <div className="col-xxl-3">
+                    <CartHistory/>
+                </div>
                     <div className="col-xxl-6 d-flex justify-content-center">
                         <ul className="navbar-nav d-flex flex-row">
                         
-                        <Link to="/brand/casio" className="link"><li className="nav-item"><span className="nav-link">Casio</span></li></Link>
-                        <Link to="/brand/citizen" className="link"><li className="nav-item"><span className="nav-link">Citizen</span></li></Link>
-                        <Link to="/brand/edox" className="link"><li className="nav-item"><span className="nav-link">Edox</span></li></Link>
-                        <Link to="/brand/swatch" className="link"><li className="nav-item"><span className="nav-link">Swatch</span></li></Link>
+                        <Link to="/brand/bulova" className="link"><li className="nav-item"><span className="nav-link">Bulova</span></li></Link>
+                        <Link to="/brand/movado" className="link"><li className="nav-item"><span className="nav-link">Movado</span></li></Link>
+                        <Link to="/brand/tag heuer" className="link"><li className="nav-item"><span className="nav-link">Tag Heuer</span></li></Link>
+                        <Link to="/brand/tissot" className="link"><li className="nav-item"><span className="nav-link">Tissot</span></li></Link>
                         </ul>
                     </div>
                     <div className="col-xxl-3 d-flex justify-content-end">

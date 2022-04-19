@@ -3,8 +3,9 @@
   }
   .titulo__reloj{
     margin-top: 20px;
-    font-family: $monse;
-    font-weight: 700;
+    font-family: $poppi;
+    letter-spacing: 3px;
+    font-weight: 500;
   }
   .modelo__reloj{
     font-family: $monse;
@@ -77,3 +78,8 @@
    .items__altura{
      margin-top: 100px;
    }
+   .card__img{
+     height: 450px;
+     object-fit: contain;
+   }
+   

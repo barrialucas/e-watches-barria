@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .marca {
   width: 100%;
   text-align: center;
@@ -66,8 +67,9 @@
 
 .titulo__reloj {
   margin-top: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 3px;
+  font-weight: 500;
 }
 
 .modelo__reloj {
@@ -153,6 +155,12 @@
 
 .items__altura {
   margin-top: 100px;
+}
+
+.card__img {
+  height: 450px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .cantidad__reloj {
@@ -241,6 +249,7 @@
   cursor: pointer;
   border: none;
   background: #bba7a7;
+  margin-top: 70px;
 }
 
 .boton__volver button > svg {
@@ -277,6 +286,12 @@
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+}
+
+.img__detail {
+  margin-bottom: 20px;
+  height: 500px;
+  width: auto;
 }
 
 .spinner {
@@ -405,5 +420,59 @@ form .total {
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
   font-weight: 600;
+}
+
+.carousel img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.tissot {
+  -o-object-position: 0px -650px;
+     object-position: 0px -650px;
+}
+
+.prod {
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #323333;
+}
+
+.flecha__izq {
+  margin-right: 40px;
+  font-size: 40px;
+  color: #BF3585;
+}
+
+.flecha__der {
+  margin-left: 40px;
+  font-size: 40px;
+  color: #BF3585;
+}
+
+.foo {
+  margin-top: 100px;
+  height: 100px;
+  background-color: #323333;
+}
+
+.foo .fa-linkedin {
+  color: white;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.foo .fa-github {
+  color: white;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.foo a:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 /*# sourceMappingURL=style.css.map */

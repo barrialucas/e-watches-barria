@@ -71,6 +71,7 @@
     cursor: pointer;
     border: none;
     background: rgb(187, 167, 167);
+    margin-top: 70px;
    }
   
    .boton__volver button > svg {
@@ -102,4 +103,9 @@
      font-size: 24px;
      font-family: $monse;
      font-weight: 700;
+   }
+   .img__detail{
+     margin-bottom: 20px;
+     height: 500px;
+     width: auto;
    }

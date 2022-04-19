@@ -1,14 +1,14 @@
 import React from "react"
-import { useContext,useState } from "react"
-import { CartContext } from "./context/CartContext"
+import { useContext,useState,createContext} from "react"
+import { CartContext } from "../context/CartContext"
 import {Link,Navigate} from "react-router-dom"
-import {db} from "../firebase/config"
+import {db} from "../../firebase/config"
 import {collection, addDoc, Timestamp,doc,updateDoc, getDoc} from "firebase/firestore"
-
 import { Modal, Button } from 'react-bootstrap';
 
+export const BuyContext= createContext()
 export const CheckOut=()=>{
-    const { cart,cartTotal,cantProdCart, cartEmpty} = useContext(CartContext);
+    const {cart,cartTotal,cantProdCart, cartEmpty} = useContext(CartContext);
 
     const [ordenId, setOrdenId]=useState(null)
     const [value, setValue]=useState({
@@ -18,24 +18,22 @@ export const CheckOut=()=>{
     })
 
     const InputCambio=(e)=>{
-
         setValue({
             ...value,
             [e.target.name]:e.target.value
         })
     }
 
-    const submit=(e)=>{
+    const Submit=(e)=>{
         e.preventDefault()
 
         const orden={
             items:cart,
-            total:cartTotal(),
+            total:cartTotal(),//
             comprador:{...value},
-            fecha: Timestamp.fromDate(new Date())
+            fecha: Timestamp.fromDate(new Date()),
+            cantidad:cantProdCart(),//
         }
-
-        const ordenRef=collection(db, "ordenes")
 
         cart.forEach((item)=>{
             const docRef=doc(db, "productos", item.id)
@@ -48,12 +46,13 @@ export const CheckOut=()=>{
                 })
             
         })
-
+        const ordenRef=collection(db, "ordenes")
         addDoc(ordenRef, orden)
             .then((doc)=>{
                 setOrdenId(doc.id)
+                const numeroOrden=doc.id
                 cartEmpty()
-                console.log(orden)
+                console.log(numeroOrden)//
             })
     }
     
@@ -95,7 +94,7 @@ export const CheckOut=()=>{
                 </div>
             </div>
 
-            <form className="needs-validation" novalidate onSubmit={submit}>
+            <form className="needs-validation" novalidate onSubmit={Submit}>
                 <div className="row">
                 <div className="col-xxl-3"></div>
                     <div className="form-floating mb-3 col-xxl-6">

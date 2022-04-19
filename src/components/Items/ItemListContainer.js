@@ -5,6 +5,8 @@ import {db} from "../../firebase/config"
 import ItemList from "./ItemList"
 import Spinner from 'react-bootstrap/Spinner'
 
+import {Car} from "../index/Carousel"
+
 const ItemListContainer=()=>{
     
     const [listaRelojes, setListaRelojes] = useState([])
@@ -30,13 +32,19 @@ const ItemListContainer=()=>{
     },[brandId])
     
     return(
-        <>
+        <div>
+        {
+            brandId
+            ?<Spinner className="spinner" animation="border" variant="info" size="xxl"/>
+            :<Car></Car>     
+        }
         {
             cargando
             ? <Spinner className="spinner" animation="border" variant="info" size="xxl"/>
-            : <ItemList listaRelojes={listaRelojes}/> 
+            : <ItemList listaRelojes={listaRelojes}/>
         }
-        </>  
+        
+        </div>  
     )
 }
 

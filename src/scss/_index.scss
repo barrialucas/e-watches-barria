@@ -1,0 +1,43 @@
+.carousel{
+    img{
+        object-fit: cover;
+    }
+}
+.tissot{
+    object-position: 0px -650px;
+}
+.prod{
+    font-size: 40px;
+    font-family: $poppi;
+    font-weight: 600;
+    color: $negro;
+}
+.flecha__izq{
+    margin-right: 40px;
+    font-size: 40px;
+    color: $violet;
+}
+.flecha__der{
+    margin-left: 40px;
+    font-size: 40px;
+    color: $violet;
+}
+.foo{
+    margin-top: 100px;
+    height: 100px;
+    background-color: $negro;
+        .fa-linkedin{
+            color: white;
+            font-size: 60px;
+            cursor: pointer; 
+        }
+        .fa-github{
+            color: white;
+            font-size: 60px;
+            cursor: pointer; 
+        }
+        a:hover{
+            transform: scale(0.90);
+            transition: 0.5s;
+        }
+}
