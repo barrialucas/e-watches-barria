@@ -12,4 +12,4 @@
 <p>Al agregar los productos al carro, se realiza una lista de los productos seleccionados con la cantidad, precios unitarios, como precios totales. Con la posibilidad de eliminar el producto del carro, como también eliminar todos los productos.</p>
 
 <h3>Checkout</h3>
-<pLuego de elegir nuestros productos pasamos a la parte de la compra final, donde vamos al checkout, y tendremos que proporcionar un formulario de nombre y apellido, email, y número de teléfono. Al rellenar los campos correctamente se generará un número de orden y estos datos se guardarán en la base de datos con los items comprados.</p>
+<p>Luego de elegir nuestros productos pasamos a la parte de la compra final, donde vamos al checkout, y tendremos que proporcionar un formulario de nombre y apellido, email, y número de teléfono. Al rellenar los campos correctamente se generará un número de orden y estos datos se guardarán en la base de datos con los items comprados.</p>
