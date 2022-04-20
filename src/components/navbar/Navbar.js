@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
-import {CartHistory} from "./CartHistory"
 
 const Navbar=()=>{
     return(
@@ -15,9 +14,7 @@ const Navbar=()=>{
             </div>
             
             <div className="row container-fluid">
-                <div className="col-xxl-3">
-                    <CartHistory/>
-                </div>
+                <div className="col-xxl-3"></div>
                     <div className="col-xxl-6 d-flex justify-content-center">
                         <ul className="navbar-nav d-flex flex-row">
                         

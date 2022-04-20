@@ -1,12 +1,11 @@
 import React from "react"
-import { useContext,useState,createContext} from "react"
+import { useContext,useState} from "react"
 import { CartContext } from "../context/CartContext"
 import {Link,Navigate} from "react-router-dom"
 import {db} from "../../firebase/config"
 import {collection, addDoc, Timestamp,doc,updateDoc, getDoc} from "firebase/firestore"
 import { Modal, Button } from 'react-bootstrap';
 
-export const BuyContext= createContext()
 export const CheckOut=()=>{
     const {cart,cartTotal,cantProdCart, cartEmpty} = useContext(CartContext);
 
@@ -23,7 +22,6 @@ export const CheckOut=()=>{
             [e.target.name]:e.target.value
         })
     }
-
     const Submit=(e)=>{
         e.preventDefault()
 
@@ -53,7 +51,10 @@ export const CheckOut=()=>{
                 const numeroOrden=doc.id
                 cartEmpty()
                 console.log(numeroOrden)//
-            })
+            }
+        )
+
+        
     }
     
     const [show, setShow] = useState(true);
@@ -89,7 +90,7 @@ export const CheckOut=()=>{
                 <h2 className="d-flex justify-content-center">Finalizar mi compra</h2>
                 <div className="row">
                     <div className="col-xxl-3"></div>
-                    <div className="col-xxl-6"><p className="d-flex justify-content-center">Al rellenar todos los campos requeridos, se le enviara un mail, con la confirmacion de la compra y los medios de pago para efectuar el mismo.</p></div>
+                    <div className="col-xxl-6"><p className="d-flex justify-content-center">Al rellenar todos los campos requeridos, se le enviara un mail, con la confirmación de la compra y los medios de pago para efectuar el mismo.</p></div>
                     <div className="col-xxl-3"></div>
                 </div>
             </div>
@@ -103,16 +104,6 @@ export const CheckOut=()=>{
                     </div>
                     <div className="col-xxl-3"></div>
                 </div>
-
-                <div className="row">
-                <div className="col-xxl-3"></div>
-                    <div className="form-floating mb-3 col-xxl-6">
-                        <input type={"email"} className="form-control" placeholder="name" required name="email" onChange={InputCambio} value={value.email}></input>
-                        <label className="label__nombre">Email *</label>
-                    </div>
-                    <div className="col-xxl-3"></div>
-                </div>
-
                 <div className="row">
                 <div className="col-xxl-3"></div>
                     <div className="form-floating mb-3 col-xxl-6 ">
@@ -121,7 +112,15 @@ export const CheckOut=()=>{
                     </div>
                     <div className="col-xxl-3"></div>
                 </div>
-
+                <div className="row">
+                <div className="col-xxl-3"></div>
+                    <div className="form-floating mb-3 col-xxl-6">
+                        <input type={"email"} className="form-control" placeholder="name" required name="email" onChange={InputCambio} value={value.email}></input>
+                        <label className="label__nombre">Email *</label>
+                    </div>
+                    <div className="col-xxl-3"></div>
+                </div>
+            
                 <div className=" d-flex justify-content-center"><h3 className="total">Total: ${cartTotal()} por {cantProdCart()} productos. </h3></div>
 
                 <div className="row">

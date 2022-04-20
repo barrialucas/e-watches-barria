@@ -475,4 +475,8 @@ form .total {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
+.buys {
+  height: 600px;
+}
 /*# sourceMappingURL=style.css.map */
