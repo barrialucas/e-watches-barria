@@ -5,6 +5,7 @@ import {Link,Navigate} from "react-router-dom"
 import {db} from "../../firebase/config"
 import {collection, addDoc, Timestamp,doc,updateDoc, getDoc} from "firebase/firestore"
 import { Modal, Button } from 'react-bootstrap';
+import swal from 'sweetalert'
 
 export const CheckOut=()=>{
     const {cart,cartTotal,cantProdCart, cartEmpty} = useContext(CartContext);
@@ -13,7 +14,7 @@ export const CheckOut=()=>{
     const [value, setValue]=useState({
         nombre:"",
         email:"",
-        tel:""
+        tel:"",
     })
 
     const InputCambio=(e)=>{
@@ -24,36 +25,47 @@ export const CheckOut=()=>{
     }
     const Submit=(e)=>{
         e.preventDefault()
-
-        const orden={
-            items:cart,
-            total:cartTotal(),//
-            comprador:{...value},
-            fecha: Timestamp.fromDate(new Date()),
-            cantidad:cantProdCart(),//
+        if (value.nombre === "" || value.email === "" || value.tel === "" || value.emailConfirmado==="") {
+            swal({
+                title: "Error!",
+                text: "Por favor ingresar datos obligatorios ! ",
+                icon: "error",
+              })
+        } else if ( value.email !== value.emailConfirmado) {
+            swal({
+                title: "Error!",
+                text: "Por favor confirme su email ! ",
+                icon: "error",
+              })
         }
-
-        cart.forEach((item)=>{
-            const docRef=doc(db, "productos", item.id)
-
-            getDoc(docRef)
-                .then((doc)=>{
-                    updateDoc(docRef,{
-                        stock: doc.data().stock -item.cantidad  
-                    })
-                })
-            
-        })
-        const ordenRef=collection(db, "ordenes")
-        addDoc(ordenRef, orden)
-            .then((doc)=>{
-                setOrdenId(doc.id)
-                const numeroOrden=doc.id
-                cartEmpty()
-                console.log(numeroOrden)//
+        else {
+            const orden={
+                items:cart,
+                total:cartTotal(),//
+                comprador:{...value},
+                fecha: Timestamp.fromDate(new Date()),
+                cantidad:cantProdCart(),//
             }
-        )
 
+            cart.forEach((item)=>{
+                const docRef=doc(db, "productos", item.id)
+
+                getDoc(docRef)
+                    .then((doc)=>{
+                        updateDoc(docRef,{
+                            stock: doc.data().stock -item.cantidad  
+                        })
+                    })
+                
+            })
+            const ordenRef=collection(db, "ordenes")
+            addDoc(ordenRef, orden)
+                .then((doc)=>{
+                    setOrdenId(doc.id)
+                    cartEmpty()           
+                }
+            )
+            }
         
     }
     
@@ -95,31 +107,42 @@ export const CheckOut=()=>{
                 </div>
             </div>
 
-            <form className="needs-validation" novalidate onSubmit={Submit}>
+            <form className="" novalidate onSubmit={Submit}>
                 <div className="row">
                 <div className="col-xxl-3"></div>
                     <div className="form-floating mb-3 col-xxl-6">
-                        <input type={"text"} className="form-control" id="validationCustom01" placeholder="name" required name="nombre" onChange={InputCambio} value={value.nombre}></input>
-                        <label className="label__nombre form-label" for="validationCustom01">Nombre y Apellido *</label>
+                        <input type={"text"} className="form-control"  placeholder="name" name="nombre" onChange={InputCambio} value={value.nombre} autoComplete='off'></input>
+                        <label className="label__nombre form-label" >Nombre y Apellido *</label>
                     </div>
                     <div className="col-xxl-3"></div>
                 </div>
                 <div className="row">
                 <div className="col-xxl-3"></div>
                     <div className="form-floating mb-3 col-xxl-6 ">
-                        <input type={"tel"} className="form-control" id="validationDefault03" placeholder="name" required name="tel" onChange={InputCambio} value={value.tel}></input>
+                        <input type={"tel"} className="form-control" placeholder="name"name="tel" onChange={InputCambio} value={value.tel} autoComplete='off'></input>
                         <label className="label__nombre">Telefono *</label>
                     </div>
                     <div className="col-xxl-3"></div>
                 </div>
+
                 <div className="row">
                 <div className="col-xxl-3"></div>
                     <div className="form-floating mb-3 col-xxl-6">
-                        <input type={"email"} className="form-control" placeholder="name" required name="email" onChange={InputCambio} value={value.email}></input>
+                        <input type={"email"} className="form-control" placeholder="name"name="email" onChange={InputCambio} value={value.email} autoComplete='off'></input>
                         <label className="label__nombre">Email *</label>
                     </div>
                     <div className="col-xxl-3"></div>
                 </div>
+
+                <div className="row">
+                <div className="col-xxl-3"></div>
+                    <div className="form-floating mb-3 col-xxl-6">
+                        <input type={"email"} className="form-control" placeholder="name" name="emailConfirmado"  onChange={InputCambio} value={value.emailConfirmado} autoComplete='off'></input>
+                        <label className="label__nombre">Confirma su email *</label>
+                    </div>
+                    <div className="col-xxl-3"></div>
+                </div>
+                
             
                 <div className=" d-flex justify-content-center"><h3 className="total">Total: ${cartTotal()} por {cantProdCart()} productos. </h3></div>
 

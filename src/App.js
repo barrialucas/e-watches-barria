@@ -8,7 +8,6 @@ import Cart from "./components/cart/Cart";
 import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import "./css/style.css";
 
-
 export default function App() {
   return (
     <CartProvider>
@@ -22,6 +21,7 @@ export default function App() {
           <Route path="/detail/:itemId" element={<ItemDetailContainer/>} />
           <Route path="/Cart" element={<Cart/>} />
           <Route path="/checkOut" element={<CheckOut/>} />
+  
 
           <Route path="*" element={ <Navigate to="/"/>} />
         </Routes>
